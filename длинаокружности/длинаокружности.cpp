@@ -3,15 +3,19 @@
 
 #include <iostream>
 #include <locale.h>
+#include <cmath>//библиотека матфункций
+#include <iomanip>//чтобы округлить//форматирование вывода
 using namespace std;
-
+const double PI = 3.141592;
 int main()
 {
     setlocale(LC_ALL, "ru");
     float d, pi = 3.14, l;
     cout << "Введите диаметр оружности:";
     cin >> d;
-    l = pi * d;// l = 2pi*r, но  d это 2 *r
+    l = PI * d;// l = 2pi*r, но  d это 2 *r
+    //окгление до двух знаков после запятой
+    cout << fixed << setprecision(2);
     cout << "Длина окружности:" << l;
 
 }
